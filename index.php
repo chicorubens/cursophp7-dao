@@ -25,5 +25,16 @@ require_once("config.php");
 $usuario->login("pam", "123");
 echo $usuario;*/
 
+//inseri uma tupla no banco;
+// $aluno = new Usuario("aluno", "@lun0"); //usando construtor, apenas duas linha no total
+// //$aluno->setDeslogin("aluno");//sem construtor
+// //$aluno->setDessenha("@lun0");//sem construtor
+// $aluno->insert();
+// echo $aluno;
+
+//atualiza cadastro de tabela usuario
+$usuario = new Usuario();
+$usuario->loadById(8);
+$usuario->update("professor", "12345");
 
 ?>
